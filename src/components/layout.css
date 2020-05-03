@@ -620,3 +620,49 @@ pre tt:after {
     font-size: 100%;
   }
 }
+
+@import url('https://fonts.googleapis.com/css?family=Righteous|Montserrat');
+
+#___gatsby {
+  position: relative;
+  background: linear-gradient(to right, #fddd10, #ff6c2c, #e5e, #2fabe1);
+  background-size: 2000%;
+  animation: gradientBackground 10s alternate ease-in-out;
+  animation-iteration-count: infinite;
+  height: 100vh;
+}
+
+@keyframes gradientBackground {
+  0% {
+    background-position: left;
+  }
+
+  100% {
+    background-position: right;
+  }
+}
+
+main {
+  align-items: center;
+  display: flex;
+  height: 100vh;
+  margin: 0 auto;
+  max-width: 960px;
+  padding: 1.0875rem;
+  width: 100%;
+}
+
+h1 {
+  color: #fff;
+  text-align: center;
+  font-family: "Righteous", cursive;
+  letter-spacing: 0.5rem;
+  text-align: center;
+  width: 100%;
+}
+
+@media only screen and (min-width: 769px) {
+  h1 {
+    font-size: 4em;
+  }
+}
