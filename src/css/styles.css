@@ -111,8 +111,12 @@ hr {
 }
 
 .exchange-links {
+  display: flex;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
+  list-style-type: none;
+  justify-content: center;
 }
 
 .exchange-links li {
@@ -120,11 +124,11 @@ hr {
   -webkit-border-radius: 100%;
   -moz-border-radius: 100%;
   border-radius: 100%;
-  display: inline-block;
-  height: 90px;
-  margin: 0 10px 20px;
+  margin: 10px;
   position: relative;
   width: 90px;
+  flex: auto;
+  max-width: 90px;
 }
 
 .exchange-links li a {
