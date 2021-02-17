@@ -27,7 +27,7 @@ ReactDOM.render(<>
         <li><a href="http://drupal.stackexchange.com/users/9227/alex-gill"
                title="Alex Gill on Drupal Answers" className="fa fa-drupal fx-scale"
                target="_blank"></a></li>
-        <li><a href="http://codepen.io/alexgill/" title="Alex Gill on Codepen"
+        <li><a href="http://codepen.io/alexpetergill/" title="Alex Gill on Codepen"
                className="fa fa-codepen fx-scale" target="_blank"></a></li>
         <li><a href="https://github.com/alexpetergill"
                title="Alex Gill on Github"
