@@ -4,43 +4,77 @@ import "./css/lib/normalize.css";
 import "./font-awesome/css/font-awesome.min.css";
 import "./css/styles.css";
 
-ReactDOM.render(<>
-  <header>
-  <div id="header">
-  </div>
-</header>
-<main>
-  <div id="main-content">
-    <section>
-      <div className="fx-fade-y">
-        <h1>Alex Peter Gill</h1>
-        <h2>Front-end Developer</h2>
-        <hr className="fx-expand" />
-      </div>
-      <ul className="exchange-links fx-opacity">
-        <li><a href="mailto:alexpetergill@icloud.com"
-          title="Email Alex Gill"
-          className="fa fa-envelope fx-scale"></a></li>
-        <li><a href="http://stackoverflow.com/users/1266251/alex"
-               title="Alex Gill on Stackoverflow"
-               className="fa fa-stack-overflow fx-scale" target="_blank"></a></li>
-        <li><a href="http://drupal.stackexchange.com/users/9227/alex-gill"
-               title="Alex Gill on Drupal Answers" className="fa fa-drupal fx-scale"
-               target="_blank"></a></li>
-        <li><a href="http://codepen.io/alexpetergill/" title="Alex Gill on Codepen"
-               className="fa fa-codepen fx-scale" target="_blank"></a></li>
-        <li><a href="https://github.com/alexpetergill"
-               title="Alex Gill on Github"
-               className="fa fa-github fx-scale" target="_blank"></a></li>
-        <li><a href="https://twitter.com/alexpetergill"
-               title="Alex Gill on Twitter" className="fa fa-twitter fx-scale"
-               target="_blank"></a>
-        </li>
-      </ul>
-    </section>
-  </div>
-</main>
-<footer>
-  <div id="footer"></div>
-</footer>
-  </>, document.getElementById("root"));
+function ExchangeListItem({ item }) {
+  const { href, title, classes } = item;
+  return (
+    <li><a href={href} title={title} className={classes} target="_blank"></a></li>
+  );
+}
+
+function ExchangeList(props) {
+  return (
+    <ul className="exchange-links fx-opacity">
+      {props.items.map((item, index) => (
+        <ExchangeListItem key={index} item={item} />
+      ))}
+    </ul>
+  );
+}
+
+const exchangeListItems = [
+  {
+    href: "mailto:alexpetergill@icloud.com",
+    title: "Email Alex Gill",
+    classes: "fa fa-envelope fx-scale"
+  },
+  {
+    href: "http://stackoverflow.com/users/1266251/alex",
+    title: "Alex Gill on Drupal Answers",
+    classes: "fa fa-stack-overflow fx-scale"
+  },
+  {
+    href: "http://drupal.stackexchange.com/users/9227/alex-gill",
+    title: "Alex Gill on Stackoverflow",
+    classes: "fa fa-drupal fx-scale"
+  },
+  {
+    href: "http://codepen.io/alexpetergill/",
+    title: "Alex Gill on Codepen",
+    classes: "fa fa-codepen fx-scale"
+  },
+  {
+    href: "https://github.com/alexpetergill",
+    title: "Alex Gill on Github",
+    classes: "fa fa-github fx-scale"
+  },
+  {
+    href: "https://twitter.com/alexpetergill",
+    title: "Alex Gill on Twitter",
+    classes: "fa fa-twitter fx-scale"
+  }
+]
+
+function App() {
+  return(
+    <>
+      <header><div id="header"></div></header>
+      <main>
+        <div id="main-content">
+          <section>
+            <div className="fx-fade-y">
+              <h1>Alex Peter Gill</h1>
+              <h2>Front-end Developer</h2>
+              <hr className="fx-expand" />
+            </div>
+            <ExchangeList items={exchangeListItems} />
+          </section>
+        </div>
+      </main>
+      <footer><div id="footer"></div></footer>
+    </>
+  )
+}
+
+ReactDOM.render(<App />, document.getElementById("root"));
+
+
