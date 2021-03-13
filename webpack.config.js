@@ -9,6 +9,7 @@ module.exports = function(_env, argv) {
 
   return {
     mode: isProduction ? "production" : "development",
+    devtool: "source-map",
     entry: {
       bundle: "./src/index.js"
     },
@@ -34,14 +35,14 @@ module.exports = function(_env, argv) {
         {
           test: /\.css$/,
           use: [
-            { loader: 'style-loader' },
-            { loader: 'css-loader' }
+            { loader: "style-loader" },
+            { loader: "css-loader" }
           ]
         },
         {
           test: /\.html$/,
           use: [
-            { loader: 'html-loader' }
+            { loader: "html-loader" }
           ]
         },
         { test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/, loader: "url-loader" },

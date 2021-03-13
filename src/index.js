@@ -7,7 +7,7 @@ import "./css/styles.css";
 function ExchangeListItem({ item }) {
   const { href, title, classes } = item;
   return (
-    <li><a href={href} title={title} className={classes} target="_blank"></a></li>
+    <li><a href={href} title={title} className={classes} target="_blank" rel="noopener"></a></li>
   );
 }
 
