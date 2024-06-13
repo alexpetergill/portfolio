@@ -29,12 +29,12 @@ const exchangeListItems = [
   },
   {
     href: "http://stackoverflow.com/users/1266251/alex",
-    title: "Alex Gill on Drupal Answers",
+    title: "Alex Gill on Stackoverflow",
     classes: "fa fa-stack-overflow fx-scale"
   },
   {
     href: "http://drupal.stackexchange.com/users/9227/alex-gill",
-    title: "Alex Gill on Stackoverflow",
+    title: "Alex Gill on Drupal Answers",
     classes: "fa fa-drupal fx-scale"
   },
   {
